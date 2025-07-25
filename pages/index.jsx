@@ -4,7 +4,7 @@ import GallerySection from "@/src/components/GallerySection";
 import EventCard from '../src/components/EventCard';
 import Layout from "@/src/layout/Layout";
 import {
-  home1Slider,
+  home2Slider,
   sliderActive3Item,
   sliderActive4Item,
   testimonialSliderOne,
@@ -35,48 +35,40 @@ React.useEffect(() => {
   return (
     <Layout header={1} noFooter>
       {/*====== Start Hero Section ======*/}
-      <section className="hero-section">
+       <section className="hero-section">
         {/*=== Hero Wrapper ===*/}
-        <div className="hero-wrapper black-bg">
+        <div className="hero-wrapper-two">
           {/*=== Hero Slider ===*/}
-          <Slider {...home1Slider} className="hero-slider-one">
+          <Slider {...home2Slider} className="hero-slider-two">
             {/*=== Single Slider ===*/}
             <div className="single-slider">
+              <div
+                className="image-layer bg_cover"
+                style={{
+                  backgroundImage: "url(assets/images/hero/hero-two_img-1.jpg)",
+                }}
+              />
               <div className="container-fluid">
-                <div className="row align-items-center">
-                  <div className="col-xl-6">
+                <div className="row justify-content-center">
+                  <div className="col-xl-9">
                     {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white">
+                    <div className="hero-content text-white text-center">
+                      <span className="ribbon">Tour &amp; Travels</span>
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Travel &amp; Adventure Camping
+                        Tour Travel &amp; Adventure Camping
                       </h1>
-                      <div className="text-button d-flex align-items-center">
-                        <p data-animation="fadeInLeft" data-delay=".5s">
-                          Nunc et dui nullam aliquam eget velit. Consectetur
-                          nulla convallis viverra quisque eleifend
-                        </p>
-                        <div
-                          className="hero-button"
-                          data-animation="fadeInRight"
-                          data-delay=".6s"
-                        >
-                          <Link legacyBehavior href="/about">
-                            <a className="main-btn primary-btn">
-                              Explore More
-                              <i className="fas fa-paper-plane" />
-                            </a>
-                          </Link>
-                        </div>
+                      <div
+                        className="hero-button"
+                        data-animation="fadeInRight"
+                        data-delay=".6s"
+                      >
+                        <Link legacyBehavior href="/about">
+                          <a className="main-btn primary-btn">
+                            Explore More
+                            <i className="fas fa-paper-plane" />
+                          </a>
+                        </Link>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-6">
-                    {/*=== Hero Image ===*/}
-                    <div className="hero-image" data-animation="fadeInRight">
-                      <img
-                        src="assets/images/hero/hero-one_img-1.jpg"
-                        alt="Hero Image"
-                      />
                     </div>
                   </div>
                 </div>
@@ -84,41 +76,101 @@ React.useEffect(() => {
             </div>
             {/*=== Single Slider ===*/}
             <div className="single-slider">
+              <div
+                className="image-layer bg_cover"
+                style={{
+                  backgroundImage: "url(assets/images/hero/hero-two_img-2.jpg)",
+                }}
+              />
               <div className="container-fluid">
-                <div className="row align-items-center">
-                  <div className="col-xl-6">
+                <div className="row justify-content-center">
+                  <div className="col-xl-9">
                     {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white">
+                    <div className="hero-content text-white text-center">
+                      <span className="ribbon">Tour &amp; Travels</span>
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Travel &amp; Adventure Tour
+                        Tour Travel &amp; Adventure Camping
                       </h1>
-                      <div className="text-button d-flex align-items-center">
-                        <p data-animation="fadeInLeft" data-delay=".5s">
-                          Nunc et dui nullam aliquam eget velit. Consectetur
-                          nulla convallis viverra quisque eleifend
-                        </p>
-                        <div
-                          className="hero-button"
-                          data-animation="fadeInRight"
-                          data-delay=".6s"
-                        >
-                          <Link legacyBehavior href="/about">
-                            <a className="main-btn primary-btn">
-                              Explore More
-                              <i className="fas fa-paper-plane" />
-                            </a>
-                          </Link>
-                        </div>
+                      <div
+                        className="hero-button"
+                        data-animation="fadeInRight"
+                        data-delay=".6s"
+                      >
+                        <Link legacyBehavior href="/about">
+                          <a className="main-btn primary-btn">
+                            Explore More
+                            <i className="fas fa-paper-plane" />
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-6">
-                    {/*=== Hero Image ===*/}
-                    <div className="hero-image" data-animation="fadeInRight">
-                      <img
-                        src="assets/images/hero/hero-one_img-2.jpg"
-                        alt="Hero Image"
-                      />
+                </div>
+              </div>
+            </div>
+            {/*=== Single Slider ===*/}
+            <div className="single-slider">
+              <div
+                className="image-layer bg_cover"
+                style={{
+                  backgroundImage: "url(assets/images/hero/hero-two_img-3.jpg)",
+                }}
+              />
+              <div className="container-fluid">
+                <div className="row justify-content-center">
+                  <div className="col-xl-9">
+                    {/*=== Hero Content ===*/}
+                    <div className="hero-content text-white text-center">
+                      <span className="ribbon">Tour &amp; Travels</span>
+                      <h1 data-animation="fadeInDown" data-delay=".4s">
+                        Tour Travel &amp; Adventure Camping
+                      </h1>
+                      <div
+                        className="hero-button"
+                        data-animation="fadeInRight"
+                        data-delay=".6s"
+                      >
+                        <Link legacyBehavior href="/about">
+                          <a className="main-btn primary-btn">
+                            Explore More
+                            <i className="fas fa-paper-plane" />
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*=== Single Slider ===*/}
+            <div className="single-slider">
+              <div
+                className="image-layer bg_cover"
+                style={{
+                  backgroundImage: "url(assets/images/hero/hero-two_img-4.jpg)",
+                }}
+              />
+              <div className="container-fluid">
+                <div className="row justify-content-center">
+                  <div className="col-xl-9">
+                    {/*=== Hero Content ===*/}
+                    <div className="hero-content text-white text-center">
+                      <span className="ribbon">Tour &amp; Travels</span>
+                      <h1 data-animation="fadeInDown" data-delay=".4s">
+                        Tour Travel &amp; Adventure Camping
+                      </h1>
+                      <div
+                        className="hero-button"
+                        data-animation="fadeInRight"
+                        data-delay=".6s"
+                      >
+                        <Link legacyBehavior href="/about">
+                          <a className="main-btn primary-btn">
+                            Explore More
+                            <i className="fas fa-paper-plane" />
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
