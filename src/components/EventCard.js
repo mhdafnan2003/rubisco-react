@@ -12,7 +12,10 @@ const EventCard = ({ title, description, date, price, image }) => {
       )}
       <h2 className="text-xl font-semibold">{title}</h2>
       <p className="text-gray-600 my-2">{description}</p>
-      <p className="text-sm text-gray-400">📅 {date}</p>
+     <p className="text-sm text-gray-400">
+  📅 {new Date(date).toLocaleDateString('en-IN')}
+</p>
+
       <p className="text-sm text-gray-400">💸 {price}</p>
     </div>
   );
