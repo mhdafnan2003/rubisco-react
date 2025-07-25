@@ -1,4 +1,7 @@
+"use client";
+import React from 'react';
 import GallerySection from "@/src/components/GallerySection";
+import EventCard from '../src/components/EventCard';
 import Layout from "@/src/layout/Layout";
 import {
   home1Slider,
@@ -14,6 +17,21 @@ const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
 const Index = () => {
+  const [events, setEvents] = React.useState([]);
+
+React.useEffect(() => {
+  const fetchEvents = async () => {
+    try {
+      const res = await fetch('http://localhost:5000/api/events');
+      const data = await res.json();
+      setEvents(data);
+    } catch (err) {
+      console.error('Error fetching events:', err);
+    }
+  };
+
+  fetchEvents();
+}, []);
   return (
     <Layout header={1} noFooter>
       {/*====== Start Hero Section ======*/}
@@ -110,6 +128,24 @@ const Index = () => {
         </div>
       </section>
       {/*====== End Hero Section ======*/}
+          <section className="py-5 bg-light">
+  <div className="container">
+    <h2 className="mb-4">📅 Upcoming Events</h2>
+    <div className="row">
+      {events.map((event) => (
+        <div className="col-md-4 mb-3" key={event._id}>
+          <EventCard
+            title={event.title}
+            description={event.description}
+            date={event.date}
+            price={event.price}
+            image={event.image}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       {/*====== Start About Section ======*/}
       <section className="about-section pt-100">
         <div className="container-fluid">
@@ -135,6 +171,8 @@ const Index = () => {
             {...sliderActive4Item}
             className="slider-active-4-item wow fadeInUp"
           >
+       
+
             {/*=== Features Image Item ===*/}
             <div className="single-features-item mb-40">
               <div className="img-holder">
@@ -153,6 +191,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
+             
             {/*=== Features Image Item ===*/}
             <div className="single-features-item mb-40">
               <div className="img-holder">
