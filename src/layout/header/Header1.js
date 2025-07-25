@@ -14,8 +14,9 @@ const Header1 = () => {
               <Link legacyBehavior href="/">
                 <a className="brand-logo">
                   <img
-                    src="assets/images/logo/logo-white.png"
+                    src="assets/images/logo/logo.png"
                     alt="Site Logo"
+                     style={{ width: "120px", height: "auto",  }}
                   />
                 </a>
               </Link>
@@ -27,37 +28,25 @@ const Header1 = () => {
                 <Link legacyBehavior href="/">
                   <a className="brand-logo">
                     <img
-                      src="assets/images/logo/logo-black.png"
+                      src="assets/images/logo/logo.png"
                       alt="Site Logo"
+                      style={{ width: "120px", height: "auto", filter: "invert(1)" }}
                     />
                   </a>
                 </Link>
               </div>
               {/*=== Nav Search ===*/}
               <div className="nav-search mb-30 d-block d-xl-none ">
-                <form>
-                  <div className="form_group">
-                    <input
-                      type="email"
-                      className="form_control"
-                      placeholder="Search Here"
-                      name="email"
-                      required
-                    />
-                    <button className="search-btn">
-                      <i className="fas fa-search" />
-                    </button>
-                  </div>
-                </form>
+                
               </div>
               {/*====== main Menu ======*/}
               <Menu />
               {/*====== Menu Button ======*/}
               <div className="menu-button mt-40 d-xl-none">
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href="https://wa.me/918590812248">
                   <a className="main-btn secondary-btn">
                     Book Now
-                    <i className="fas fa-paper-plane" />
+                    <i className="fab fa-whatsapp" />
                   </a>
                 </Link>
               </div>
@@ -65,10 +54,10 @@ const Header1 = () => {
             {/*====== Nav Right Item ======*/}
             <div className="nav-right-item">
               <div className="menu-button d-xl-block d-none">
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href="https://wa.me/918590812248">
                   <a className="main-btn primary-btn">
                     Book Now
-                    <i className="fas fa-paper-plane" />
+                    <i className="fab fa-whatsapp" />
                   </a>
                 </Link>
               </div>
