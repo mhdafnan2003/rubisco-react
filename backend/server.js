@@ -10,6 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ✅ Serve uploaded images
+app.use('/uploads', express.static('uploads'));
+
 app.use('/api/events', eventRoutes);
 app.use('/api/auth', authRoutes);
 
