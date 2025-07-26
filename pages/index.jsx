@@ -15,6 +15,7 @@ import Link from "next/link";
 import { Nav, Tab } from "react-bootstrap";
 import Slider from "react-slick";
 import GoogleTestimonialSlider from '@/src/components/GoogleTestimonialSlider';
+import ContactForm from '@/src/components/ContactForm';
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
@@ -664,91 +665,7 @@ image={event.image}
       {/* <GoogleTestimonialSlider/> */}
       {/*====== End Testimonial Section ======*/}
     {/*====== Start Contact Section ======*/}
-      <section className="contact-section pb-100" id='contact' >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-6">
-              <div className="section-title text-center mb-50 wow fadeInDown">
-                <span className="sub-title">Get In Touch</span>
-                <h2>Send Us Message</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="contact-area wow fadeInUp">
-                <form className="contact-form">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="form_group">
-                        <input
-                          type="text"
-                          placeholder="Name"
-                          className="form_control"
-                          name="name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form_group">
-                        <input
-                          type="text"
-                          placeholder="Phone Number"
-                          className="form_control"
-                          name="number"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form_group">
-                        <input
-                          type="email"
-                          placeholder="Email Address"
-                          className="form_control"
-                          name="email"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="form_group">
-                        <input
-                          type="url"
-                          placeholder="Website"
-                          className="form_control"
-                          name="website"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form_group">
-                        <textarea
-                          name="message"
-                          placeholder="Write Message"
-                          className="form_control"
-                          rows={6}
-                          defaultValue={""}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form_group text-center">
-                        <button className="main-btn primary-btn">
-                          Send Us Message
-                          <i className="fas fa-paper-plane" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactForm/>
       {/*====== End Contact Section ======*/}
       {/*====== Start Gallery Section ======*/}
       <GallerySection />
