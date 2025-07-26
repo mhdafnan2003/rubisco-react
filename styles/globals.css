@@ -32,11 +32,39 @@ input[type="date"].booing_datepicker::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 10px;
 }
+.Customlogo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* Tablet view (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .Customlogo {
+      width: 200px;
+    }
+  }
+
+  /* Mobile view (max-width: 768px) */
+  @media (max-width: 768px) {
+    .Customlogo {
+      width: 200px;
+    }
+  }
 .activity-image-item {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background-color: #333; /* A background for any image loading delay */
+}
+@media (max-width: 767px) {
+  .hero-section .single-slider {
+    height: 100vh; /* Set height to 100% of the viewport height */
+    
+    /* These flex properties ensure your content remains centered vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 input[type="date"].booing_datepicker::before {

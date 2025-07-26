@@ -5,6 +5,7 @@ import EventCard from '../src/components/EventCard';
 import Layout from "@/src/layout/Layout";
 import {
   home2Slider,
+  upcomingEventsSettings,
   sliderActive3Item,
   sliderActive4Item,
   testimonialSliderOne,
@@ -13,6 +14,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Nav, Tab } from "react-bootstrap";
 import Slider from "react-slick";
+import GoogleTestimonialSlider from '@/src/components/GoogleTestimonialSlider';
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
@@ -45,7 +47,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero-two_img-1.jpg)",
+                  backgroundImage: "url(assets/images/hero/hero.jpeg)",
                 }}
               />
               <div className="container-fluid">
@@ -53,7 +55,7 @@ React.useEffect(() => {
                   <div className="col-xl-9">
                     {/*=== Hero Content ===*/}
                     <div className="hero-content text-white text-center">
-                      <span className="ribbon">Tour &amp; Travels</span>
+                      {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
                         Tour Travel &amp; Adventure Camping
                       </h1>
@@ -62,9 +64,9 @@ React.useEffect(() => {
                         data-animation="fadeInRight"
                         data-delay=".6s"
                       >
-                        <Link legacyBehavior href="/about">
+                        <Link legacyBehavior href="#service">
                           <a className="main-btn primary-btn">
-                            Explore More
+                            Explore Our Service
                             <i className="fas fa-paper-plane" />
                           </a>
                         </Link>
@@ -79,7 +81,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero-two_img-2.jpg)",
+                  backgroundImage: "url(assets/images/hero/hero3.jpeg)",
                 }}
               />
               <div className="container-fluid">
@@ -87,7 +89,7 @@ React.useEffect(() => {
                   <div className="col-xl-9">
                     {/*=== Hero Content ===*/}
                     <div className="hero-content text-white text-center">
-                      <span className="ribbon">Tour &amp; Travels</span>
+                      {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
                         Tour Travel &amp; Adventure Camping
                       </h1>
@@ -96,9 +98,9 @@ React.useEffect(() => {
                         data-animation="fadeInRight"
                         data-delay=".6s"
                       >
-                        <Link legacyBehavior href="/about">
+                      <Link legacyBehavior href="#service">
                           <a className="main-btn primary-btn">
-                            Explore More
+                            Explore Our Service
                             <i className="fas fa-paper-plane" />
                           </a>
                         </Link>
@@ -113,7 +115,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero-two_img-3.jpg)",
+                  backgroundImage: "url(assets/images/hero/hero2.jpg)",
                 }}
               />
               <div className="container-fluid">
@@ -121,7 +123,7 @@ React.useEffect(() => {
                   <div className="col-xl-9">
                     {/*=== Hero Content ===*/}
                     <div className="hero-content text-white text-center">
-                      <span className="ribbon">Tour &amp; Travels</span>
+                      {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
                         Tour Travel &amp; Adventure Camping
                       </h1>
@@ -130,43 +132,9 @@ React.useEffect(() => {
                         data-animation="fadeInRight"
                         data-delay=".6s"
                       >
-                        <Link legacyBehavior href="/about">
+                       <Link legacyBehavior href="#service">
                           <a className="main-btn primary-btn">
-                            Explore More
-                            <i className="fas fa-paper-plane" />
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*=== Single Slider ===*/}
-            <div className="single-slider">
-              <div
-                className="image-layer bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/hero/hero-two_img-4.jpg)",
-                }}
-              />
-              <div className="container-fluid">
-                <div className="row justify-content-center">
-                  <div className="col-xl-9">
-                    {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white text-center">
-                      <span className="ribbon">Tour &amp; Travels</span>
-                      <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Tour Travel &amp; Adventure Camping
-                      </h1>
-                      <div
-                        className="hero-button"
-                        data-animation="fadeInRight"
-                        data-delay=".6s"
-                      >
-                        <Link legacyBehavior href="/about">
-                          <a className="main-btn primary-btn">
-                            Explore More
+                            Explore Our Service
                             <i className="fas fa-paper-plane" />
                           </a>
                         </Link>
@@ -182,7 +150,7 @@ React.useEffect(() => {
       {/*====== End Hero Section ======*/}
         
       {/*====== Start About Section ======*/}
-      <section className="about-section pt-100">
+      <section className="about-section pt-100" id='about' >
         <div className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-9">
@@ -193,11 +161,7 @@ React.useEffect(() => {
                   <h2>We Are Most Funning Company About Travel &amp; Tours</h2>
                 </div>
                 <p>
-                  Sit amet consectetur. Velit integer eu tincidunt scelerisque.
-                  Sodales volutpat neque fermentum malesuada scelerisque massa
-                  lacus. Ultrices eget leo cras odio blandit rhoncus eu. At
-                  feugiat condimentum massa integer iaculis sit sit. Sagittis
-                  vitae quis sed vitae congue
+                 Founded in 2021, we are a trusted travel agency dedicated to making every journey memorable and hassle-free. Over the years, we have organized countless college trips, school excursions, and strangers’ adventure trips, helping people explore new places, make friends, and create unforgettable memories. For families, we offer carefully planned family tours and resort bookings, ensuring comfort and relaxation. Additionally, we provide reliable flight and train ticket booking services at competitive prices, making travel simple and stress-free. Whether it’s an adventurous trip with friends or a peaceful family getaway, we are here to turn your travel dreams into reality.
                 </p>
               </div>
             </div>
@@ -212,145 +176,36 @@ React.useEffect(() => {
             <div className="single-features-item mb-40">
               <div className="img-holder">
                 <img
-                  src="assets/images/features/feat-1.jpg"
+                  src="assets/images/features/feat1.jpg"
                   alt="Features Image"
                 />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Tent Camping Services</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
-              </div>
-            </div>
-             
-            {/*=== Features Image Item ===*/}
-            <div className="single-features-item mb-40">
-              <div className="img-holder">
-                <img
-                  src="assets/images/features/feat-2.jpg"
-                  alt="Features Image"
-                />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Trailers and RV Spots</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
               </div>
             </div>
             {/*=== Features Image Item ===*/}
             <div className="single-features-item mb-40">
               <div className="img-holder">
                 <img
-                  src="assets/images/features/feat-3.jpg"
+                  src="assets/images/features/feat3.jpeg"
                   alt="Features Image"
                 />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Adventure and Climbing</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
               </div>
             </div>
             {/*=== Features Image Item ===*/}
             <div className="single-features-item mb-40">
               <div className="img-holder">
                 <img
-                  src="assets/images/features/feat-4.jpg"
+                  src="assets/images/features/feat4.jpeg"
                   alt="Features Image"
                 />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Couple Camping or Cabin</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
               </div>
             </div>
             {/*=== Features Image Item ===*/}
             <div className="single-features-item mb-40">
               <div className="img-holder">
                 <img
-                  src="assets/images/features/feat-1.jpg"
+                  src="assets/images/features/feat5.jpeg"
                   alt="Features Image"
                 />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Tent Camping Services</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
-              </div>
-            </div>
-            {/*=== Features Image Item ===*/}
-            <div className="single-features-item mb-40">
-              <div className="img-holder">
-                <img
-                  src="assets/images/features/feat-2.jpg"
-                  alt="Features Image"
-                />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Trailers and RV Spots</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
-              </div>
-            </div>
-            {/*=== Features Image Item ===*/}
-            <div className="single-features-item mb-40">
-              <div className="img-holder">
-                <img
-                  src="assets/images/features/feat-3.jpg"
-                  alt="Features Image"
-                />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Adventure and Climbing</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
-              </div>
-            </div>
-            {/*=== Features Image Item ===*/}
-            <div className="single-features-item mb-40">
-              <div className="img-holder">
-                <img
-                  src="assets/images/features/feat-4.jpg"
-                  alt="Features Image"
-                />
-                <div className="content">
-                  <div className="text">
-                    <h4 className="title">Couple Camping or Cabin</h4>
-                    <a href="#" className="icon-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </div>
-                  <p>Set unde omnis estenatus voluptatem aperiae.</p>
-                </div>
               </div>
             </div>
           </Slider>
@@ -361,7 +216,7 @@ React.useEffect(() => {
       
       {/*====== End Hero Section ======*/}
       {/*====== Start Activity Section ======*/}
-      <section className="services-section black-bg pt-100 pb-100">
+ <section className="services-section black-bg pt-100 pb-100" id='service'>
   <div className="container-fluid">
     <div className="row justify-content-center">
       <div className="col-xl-7">
@@ -382,12 +237,12 @@ React.useEffect(() => {
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+            backgroundImage: "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80)",
           }}
         />
         <div className="content">
           <div className="icon">
-            <i className="flaticon-camping" />
+            <i className="fas fa-route" />
           </div>
           <h3 className="title">
             <a href="https://wa.me/918590812248">STRANGERS TRIP</a>
@@ -402,17 +257,17 @@ React.useEffect(() => {
         </div>
       </div>
 
-      {/*=== RESORT BOOKING (icon unchanged as per your request) ===*/}
+      {/*=== RESORT BOOKING ===*/}
       <div className="single-service-item-two">
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+            backgroundImage: "url(https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
           }}
         />
         <div className="content">
           <div className="icon">
-            <i className="flaticon-cable-car" />
+            <i className="fas fa-hotel" />
           </div>
           <h3 className="title">
             <a href="https://wa.me/918590812248">RESORT BOOKING</a>
@@ -432,12 +287,12 @@ React.useEffect(() => {
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+            backgroundImage: "url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
           }}
         />
         <div className="content">
           <div className="icon">
-            <i className="flaticon-trailer" />
+            <i className="fas fa-user-graduate" />
           </div>
           <h3 className="title">
             <a href="https://wa.me/918590812248">COLLEGE TRIP</a>
@@ -452,17 +307,17 @@ React.useEffect(() => {
         </div>
       </div>
 
-      {/*=== SCHOOL TOUR ===*/}
+      {/*=== SCHOOL TOUR (FINAL IMAGE URL) ===*/}
       <div className="single-service-item-two">
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+            backgroundImage: "url(https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=932&q=80)",
           }}
         />
         <div className="content">
           <div className="icon">
-            <i className="flaticon-firewood" />
+            <i className="fas fa-school" />
           </div>
           <h3 className="title">
             <a href="https://wa.me/918590812248">SCHOOL TOUR</a>
@@ -477,17 +332,17 @@ React.useEffect(() => {
         </div>
       </div>
 
-      {/*=== FAMILY TRIP ===*/}
+      {/*=== FAMILY TRIP (FINAL IMAGE URL) ===*/}
       <div className="single-service-item-two">
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+            backgroundImage: "url(https://images.unsplash.com/photo-1442504206296-ac5d0531a7a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
           }}
         />
         <div className="content">
           <div className="icon">
-            <i className="flaticon-cable-car" />
+            <i className="fas fa-users" />
           </div>
           <h3 className="title">
             <a href="https://wa.me/918590812248">FAMILY TRIP</a>
@@ -505,23 +360,23 @@ React.useEffect(() => {
   </div>
 </section>
       {/*====== End Activity Section ======*/}
-              <section className="py-5 bg-light">
-  <div className="container">
-    <h2 className="mb-4 text-center my-4">Upcoming Events</h2>
-    <div className="row">
-      {events.map((event) => (
-        <div className="col-md-4 mb-3" key={event._id}>
-          <EventCard
-            title={event.title}
-            description={event.description}
-            date={event.date}
-            price={event.price}
-            image={event.image}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
+     <section className="py-5 bg-light" id='event' >
+<div className="container">
+<h2 className="mb-4 text-center my-4">Upcoming Events</h2>
+<div className="row">
+{events.map((event) => (
+<div className="col-md-4 mb-3" key={event._id}>
+<EventCard
+title={event.title}
+description={event.description}
+date={event.date}
+price={event.price}
+image={event.image}
+/>
+</div>
+))}
+</div>
+</div>
 </section>
       {/*====== end  Section ======*/}
       {/*====== Start Activity Section ======*/}
@@ -638,181 +493,14 @@ React.useEffect(() => {
   </div>
 </section>
       {/*====== Start activity Section ======*/}
-      {/*====== Start Services Section ======*/}
-      <section className="services-seciton pt-100">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8 col-lg-10">
-              {/*=== Section Title ===*/}
-              <div className="section-title text-center mb-60 wow fadeInDown">
-                <span className="sub-title">Popular Services</span>
-                <h2>Amazing Adventure Camping Services for Enjoyed</h2>
-              </div>
-            </div>
-          </div>
-          <Slider
-            {...sliderActive3Item}
-            className="slider-active-3-item wow fadeInUp"
-          >
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item mb-40">
-              <div className="content">
-                <h3 className="title">
-                  <Link legacyBehavior href="/tour-details">
-                    <a>Classic Tents</a>
-                  </Link>
-                </h3>
-                <p>
-                  Sit amet consecteturauris natoque name pellentue augue mattis
-                  faucibus
-                </p>
-                <div className="meta">
-                  <span className="icon">
-                    <i className="flaticon-blanket" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-cat" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-tent" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-fire" />
-                  </span>
-                </div>
-                <a href="#" className="icon-btn">
-                  <i className="far fa-arrow-right" />
-                </a>
-              </div>
-              <div className="img-holder">
-                <img
-                  src="assets/images/service/service-1.jpg"
-                  alt="Service Image"
-                />
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item mb-40">
-              <div className="content">
-                <h3 className="title">
-                  <Link legacyBehavior href="/tour-details">
-                    Glamping Cabin
-                  </Link>
-                </h3>
-                <p>
-                  Sit amet consecteturauris natoque name pellentue augue mattis
-                  faucibus
-                </p>
-                <div className="meta">
-                  <span className="icon">
-                    <i className="flaticon-blanket" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-cat" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-tent" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-fire" />
-                  </span>
-                </div>
-                <a href="#" className="icon-btn">
-                  <i className="far fa-arrow-right" />
-                </a>
-              </div>
-              <div className="img-holder">
-                <img
-                  src="assets/images/service/service-2.jpg"
-                  alt="Service Image"
-                />
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item mb-40">
-              <div className="content">
-                <h3 className="title">
-                  <Link legacyBehavior href="/tour-details">
-                    RV Luxury Tent
-                  </Link>
-                </h3>
-                <p>
-                  Sit amet consecteturauris natoque name pellentue augue mattis
-                  faucibus
-                </p>
-                <div className="meta">
-                  <span className="icon">
-                    <i className="flaticon-blanket" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-cat" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-tent" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-fire" />
-                  </span>
-                </div>
-                <a href="#" className="icon-btn">
-                  <i className="far fa-arrow-right" />
-                </a>
-              </div>
-              <div className="img-holder">
-                <img
-                  src="assets/images/service/service-3.jpg"
-                  alt="Service Image"
-                />
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item mb-40">
-              <div className="content">
-                <h3 className="title">
-                  <Link legacyBehavior href="/tour-details">
-                    RV Luxury Tent
-                  </Link>
-                </h3>
-                <p>
-                  Sit amet consecteturauris natoque name pellentue augue mattis
-                  faucibus
-                </p>
-                <div className="meta">
-                  <span className="icon">
-                    <i className="flaticon-blanket" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-cat" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-tent" />
-                  </span>
-                  <span className="icon">
-                    <i className="flaticon-fire" />
-                  </span>
-                </div>
-                <a href="#" className="icon-btn">
-                  <i className="far fa-arrow-right" />
-                </a>
-              </div>
-              <div className="img-holder">
-                <img
-                  src="assets/images/service/service-2.jpg"
-                  alt="Service Image"
-                />
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section>
-      {/*====== End Services Section ======*/}
+     
       {/*====== Start Features Section ======*/}
      
       {/*====== End Features Section ======*/}
       {/*====== Start CTA Section ======*/}
       <section
         className="cta-bg overlay bg_cover pt-140 pb-150"
-        style={{ backgroundImage: "url(assets/images/bg/cta-bg.jpg)" }}
+        style={{ backgroundImage: "url(assets/images/bg/feat2.jpg)" }}
       >
         <div className="container">
           <div className="row justify-content-center">
@@ -822,10 +510,10 @@ React.useEffect(() => {
                 <h2 className="mb-35">
                   Ready to Travel With Real Adventure and Enjoy Natural
                 </h2>
-                <Link legacyBehavior href="/about">
+                <Link legacyBehavior href="https://www.instagram.com/rubisco_tour_planners/">
                   <a className="main-btn primary-btn">
-                    Check Availability
-                    <i className="far fa-paper-plane" />
+                    Follow Us on Instagram
+                    <i className="fab fa-instagram" />
                   </a>
                 </Link>
               </div>
@@ -838,7 +526,7 @@ React.useEffect(() => {
      
       {/*====== End Fact Section ======*/}
       {/*====== Start Testimonial Section ======*/}
-      <section className="testimonial-section pt-60">
+     <section className="testimonial-section pt-60">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-8">
@@ -854,7 +542,7 @@ React.useEffect(() => {
               {/*=== Testimonial Image ===*/}
               <div className="testimonial-one_image-box mb-40 wow fadeInLeft">
                 <img
-                  src="assets/images/testimonial/testimonial-1.jpg"
+                  src="assets/images/testimonial/test.jpeg"
                   alt="Testimonial Image"
                 />
               </div>
@@ -869,14 +557,14 @@ React.useEffect(() => {
                 <div className="gw-testimonial-item">
                   <div className="testimonial-inner-content">
                     <div className="quote-rating-box">
-                      <div className="icon">
+                        <div className="icon">
                         <img
                           src="assets/images/testimonial/quote.png"
                           alt="quote icon"
                         />
                       </div>
                       <div className="ratings-box">
-                        <h4>Quality Services</h4>
+                        <h4>Hiba Fathima p</h4>
                         <ul className="ratings">
                           <li>
                             <i className="fas fa-star" />
@@ -884,35 +572,14 @@ React.useEffect(() => {
                           <li>
                             <i className="fas fa-star" />
                           </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
+
                         </ul>
                       </div>
                     </div>
                     <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
+                      I had an amazing experience with the team, and I truly appreciate the exceptional level of cooperation throughout. From the beginning, the team was incredibly responsive and organized, ensuring that everything went smoothly and according to plan. 
                     </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
                 {/*=== Testimonial Item ===*/}
@@ -926,7 +593,7 @@ React.useEffect(() => {
                         />
                       </div>
                       <div className="ratings-box">
-                        <h4>Quality Services</h4>
+                        <h4>Devika Rajeesh</h4>
                         <ul className="ratings">
                           <li>
                             <i className="fas fa-star" />
@@ -947,22 +614,9 @@ React.useEffect(() => {
                       </div>
                     </div>
                     <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
+                      Best trip… the food was good.. the resort was also good. We enjoyed a lot. Best experience. Thank you rubiscooo
                     </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
                 {/*=== Testimonial Item ===*/}
@@ -971,12 +625,12 @@ React.useEffect(() => {
                     <div className="quote-rating-box">
                       <div className="icon">
                         <img
-                          src="assets/images/testimonial/quote.png"
+                          // src="assets/images/testimonial/test.jpeg"
                           alt="quote icon"
                         />
                       </div>
                       <div className="ratings-box">
-                        <h4>Quality Services</h4>
+                        <h4>Dixon Titus</h4>
                         <ul className="ratings">
                           <li>
                             <i className="fas fa-star" />
@@ -997,22 +651,9 @@ React.useEffect(() => {
                       </div>
                     </div>
                     <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
+                      It was a wonderful trip, good and well organised, nice resort and bus, good food, thank you shinas bro and shamil bro for guiding us and arranging all.it was a great experience all arrangements are done is perfect and good
                     </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </Slider>
@@ -1020,10 +661,95 @@ React.useEffect(() => {
           </div>
         </div>
       </section>
+      {/* <GoogleTestimonialSlider/> */}
       {/*====== End Testimonial Section ======*/}
-      {/*====== Start Blog Section ======*/}
-      
-      {/*====== End Blog Section ======*/}
+    {/*====== Start Contact Section ======*/}
+      <section className="contact-section pb-100" id='contact' >
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6">
+              <div className="section-title text-center mb-50 wow fadeInDown">
+                <span className="sub-title">Get In Touch</span>
+                <h2>Send Us Message</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="contact-area wow fadeInUp">
+                <form className="contact-form">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="form_group">
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          className="form_control"
+                          name="name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form_group">
+                        <input
+                          type="text"
+                          placeholder="Phone Number"
+                          className="form_control"
+                          name="number"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form_group">
+                        <input
+                          type="email"
+                          placeholder="Email Address"
+                          className="form_control"
+                          name="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form_group">
+                        <input
+                          type="url"
+                          placeholder="Website"
+                          className="form_control"
+                          name="website"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="form_group">
+                        <textarea
+                          name="message"
+                          placeholder="Write Message"
+                          className="form_control"
+                          rows={6}
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="form_group text-center">
+                        <button className="main-btn primary-btn">
+                          Send Us Message
+                          <i className="fas fa-paper-plane" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*====== End Contact Section ======*/}
       {/*====== Start Gallery Section ======*/}
       <GallerySection />
       {/*====== End Gallery Section ======*/}
@@ -1105,7 +831,7 @@ React.useEffect(() => {
                       To take trivial example which us ever undertakes laborious
                       physica exercise except obsome
                     </p>
-                    <a href="#" className="footer-logo">
+                    <a href="#" className="footer-logo Customlogo">
                       <img
                         src="assets/images/logo/logo.png"
                         alt="Site Logo"
@@ -1147,19 +873,19 @@ React.useEffect(() => {
                   <div className="footer-content">
                     <ul className="footer-widget-nav">
                       <li>
-                        <a href="#">Caravan Soler Tent</a>
+                        <a href="#">Home</a>
                       </li>
                       <li>
-                        <a href="#">Family Tent Camping</a>
+                        <a href="#about">About Us</a>
                       </li>
                       <li>
-                        <a href="#">Classic Tent Camping</a>
+                        <a href="#service">Services</a>
                       </li>
                       <li>
-                        <a href="#">Wild Tent Camping</a>
+                        <a href="#event">Events</a>
                       </li>
                       <li>
-                        <a href="#">Small Cabin Wood</a>
+                        <a href="#contact">Contact Us</a>
                       </li>
                     </ul>
                     
