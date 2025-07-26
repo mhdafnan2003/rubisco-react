@@ -16,7 +16,7 @@ const Header1 = () => {
                   <img
                     src="assets/images/logo/logo.png"
                     alt="Site Logo"
-                     style={{ width: "120px", height: "auto",  }}
+                     style={{ width: "120px", height: "auto", filter: "invert(1)"  }}
                   />
                 </a>
               </Link>
@@ -30,7 +30,7 @@ const Header1 = () => {
                     <img
                       src="assets/images/logo/logo.png"
                       alt="Site Logo"
-                      style={{ width: "120px", height: "auto", filter: "invert(1)" }}
+                      style={{ width: "120px", height: "auto",  }}
                     />
                   </a>
                 </Link>

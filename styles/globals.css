@@ -32,6 +32,7 @@ input[type="date"].booing_datepicker::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 10px;
 }
+
 .Customlogo {
     width: 200px;
     height: auto;

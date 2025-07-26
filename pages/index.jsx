@@ -58,7 +58,7 @@ React.useEffect(() => {
                     <div className="hero-content text-white text-center">
                       {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Tour Travel &amp; Adventure Camping
+                        Your Ultimate Adventure Awaits!
                       </h1>
                       <div
                         className="hero-button"
@@ -92,7 +92,7 @@ React.useEffect(() => {
                     <div className="hero-content text-white text-center">
                       {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Tour Travel &amp; Adventure Camping
+                        Your Ultimate  Adventure Awaits!
                       </h1>
                       <div
                         className="hero-button"
@@ -126,7 +126,7 @@ React.useEffect(() => {
                     <div className="hero-content text-white text-center">
                       {/* <span className="ribbon">Tour &amp; Travels</span> */}
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Tour Travel &amp; Adventure Camping
+                        Your Ultimate  Adventure Awaits!
                       </h1>
                       <div
                         className="hero-button"
@@ -558,12 +558,12 @@ image={event.image}
                 <div className="gw-testimonial-item">
                   <div className="testimonial-inner-content">
                     <div className="quote-rating-box">
-                        <div className="icon">
+                        {/* <div className="icon">
                         <img
                           src="assets/images/testimonial/quote.png"
                           alt="quote icon"
                         />
-                      </div>
+                      </div> */}
                       <div className="ratings-box">
                         <h4>Hiba Fathima p</h4>
                         <ul className="ratings">
@@ -587,12 +587,12 @@ image={event.image}
                 <div className="gw-testimonial-item">
                   <div className="testimonial-inner-content">
                     <div className="quote-rating-box">
-                      <div className="icon">
+                      {/* <div className="icon">
                         <img
                           src="assets/images/testimonial/quote.png"
                           alt="quote icon"
                         />
-                      </div>
+                      </div> */}
                       <div className="ratings-box">
                         <h4>Devika Rajeesh</h4>
                         <ul className="ratings">
@@ -624,12 +624,12 @@ image={event.image}
                 <div className="gw-testimonial-item">
                   <div className="testimonial-inner-content">
                     <div className="quote-rating-box">
-                      <div className="icon">
+                      {/* <div className="icon">
                         <img
-                          // src="assets/images/testimonial/test.jpeg"
+                          src="assets/images/testimonial/test.jpeg"
                           alt="quote icon"
                         />
-                      </div>
+                      </div> */}
                       <div className="ratings-box">
                         <h4>Dixon Titus</h4>
                         <ul className="ratings">
@@ -752,6 +752,7 @@ image={event.image}
                       <img
                         src="assets/images/logo/logo.png"
                         alt="Site Logo"
+                        style={{filter: "invert(1)"}}
                       />
                     </a>
                   </div>
@@ -764,19 +765,22 @@ image={event.image}
                   <div className="footer-content">
                     <ul className="footer-widget-nav">
                       <li>
-                        <a href="#">Caravan Soler Tent</a>
+                        <a href="#service">Strangers Trip</a>
                       </li>
                       <li>
-                        <a href="#">Family Tent Camping</a>
+                        <a href="#service">College Trip</a>
                       </li>
                       <li>
-                        <a href="#">Classic Tent Camping</a>
+                        <a href="#service">School Tour</a>
                       </li>
                       <li>
-                        <a href="#">Wild Tent Camping</a>
+                        <a href="#service">Family Trip</a>
                       </li>
                       <li>
-                        <a href="#">Small Cabin Wood</a>
+                        <a href="#service">Cooperate Trip </a>
+                      </li>
+                      <li>
+                        <a href="#service">Ticket Bookings </a>
                       </li>
                     </ul>
                     
@@ -823,11 +827,15 @@ image={event.image}
                     , All Right Reserved
                   </p>
                 </div>
-              </div>
-              <div className="col-lg-6">
-                {/*=== Footer Nav ===*/}
                 
               </div>
+              <div className="footer-text col-lg-6 " style={{textAlign:'right'}}>
+                  <p>
+                    Designed by
+                    <span style={{ color: "#F7921E" }}><a href="https://www.zenorix.in/">Zenorix.in</a></span>
+                  </p>
+                </div>
+             
             </div>
           </div>
         </div>
