@@ -180,24 +180,7 @@ React.useEffect(() => {
         </div>
       </section>
       {/*====== End Hero Section ======*/}
-          <section className="py-5 bg-light">
-  <div className="container">
-    <h2 className="mb-4">📅 Upcoming Events</h2>
-    <div className="row">
-      {events.map((event) => (
-        <div className="col-md-4 mb-3" key={event._id}>
-          <EventCard
-            title={event.title}
-            description={event.description}
-            date={event.date}
-            price={event.price}
-            image={event.image}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        
       {/*====== Start About Section ======*/}
       <section className="about-section pt-100">
         <div className="container-fluid">
@@ -379,145 +362,282 @@ React.useEffect(() => {
       {/*====== End Hero Section ======*/}
       {/*====== Start Activity Section ======*/}
       <section className="services-section black-bg pt-100 pb-100">
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-xl-7">
-              {/*=== Section Title ===*/}
-              <div className="section-title text-center text-white mb-50 wow fadeInDown">
-                <span className="sub-title">Popular Services</span>
-                <h2>Amazing Adventure Camping Services for Enjoyed</h2>
-              </div>
+  <div className="container-fluid">
+    <div className="row justify-content-center">
+      <div className="col-xl-7">
+        {/*=== Section Title ===*/}
+        <div className="section-title text-center text-white mb-50 wow fadeInDown">
+          <span className="sub-title">Popular Services</span>
+          <h2>What we are going to offer for you is?</h2>
+        </div>
+      </div>
+    </div>
+    {/*=== Service Slider One ===*/}
+    <Slider
+      {...sliderActive4Item}
+      className="slider-active-4-item wow fadeInUp"
+    >
+      {/*=== STRANGERS TRIP ===*/}
+      <div className="single-service-item-two">
+        <div
+          className="hover-bg bg_cover"
+          style={{
+            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+          }}
+        />
+        <div className="content">
+          <div className="icon">
+            <i className="flaticon-camping" />
+          </div>
+          <h3 className="title">
+            <a href="https://wa.me/918590812248">STRANGERS TRIP</a>
+          </h3>
+          <p>
+            Join a fun-filled trip with like-minded travelers, explore new
+            places, make friends, and create unforgettable memories.
+          </p>
+          <a href="https://wa.me/918590812248" className="btn-link">
+            For More Details <i className="far fa-long-arrow-right" />
+          </a>
+        </div>
+      </div>
+
+      {/*=== RESORT BOOKING (icon unchanged as per your request) ===*/}
+      <div className="single-service-item-two">
+        <div
+          className="hover-bg bg_cover"
+          style={{
+            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+          }}
+        />
+        <div className="content">
+          <div className="icon">
+            <i className="flaticon-cable-car" />
+          </div>
+          <h3 className="title">
+            <a href="https://wa.me/918590812248">RESORT BOOKING</a>
+          </h3>
+          <p>
+            Book premium resorts at the best prices. Perfect for family
+            vacations, romantic getaways, or corporate retreats.
+          </p>
+          <a href="https://wa.me/918590812248" className="btn-link">
+            For More Details <i className="far fa-long-arrow-right" />
+          </a>
+        </div>
+      </div>
+
+      {/*=== COLLEGE TRIP ===*/}
+      <div className="single-service-item-two">
+        <div
+          className="hover-bg bg_cover"
+          style={{
+            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+          }}
+        />
+        <div className="content">
+          <div className="icon">
+            <i className="flaticon-trailer" />
+          </div>
+          <h3 className="title">
+            <a href="https://wa.me/918590812248">COLLEGE TRIP</a>
+          </h3>
+          <p>
+            Fun, safe, and budget-friendly college tours designed for students—
+            adventure, learning, and bonding all in one trip.
+          </p>
+          <a href="https://wa.me/918590812248" className="btn-link">
+            For More Details <i className="far fa-long-arrow-right" />
+          </a>
+        </div>
+      </div>
+
+      {/*=== SCHOOL TOUR ===*/}
+      <div className="single-service-item-two">
+        <div
+          className="hover-bg bg_cover"
+          style={{
+            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+          }}
+        />
+        <div className="content">
+          <div className="icon">
+            <i className="flaticon-firewood" />
+          </div>
+          <h3 className="title">
+            <a href="https://wa.me/918590812248">SCHOOL TOUR</a>
+          </h3>
+          <p>
+            Educational and recreational tours for school students with complete
+            safety, learning experiences, and fun activities.
+          </p>
+          <a href="https://wa.me/918590812248" className="btn-link">
+            For More Details <i className="far fa-long-arrow-right" />
+          </a>
+        </div>
+      </div>
+
+      {/*=== FAMILY TRIP ===*/}
+      <div className="single-service-item-two">
+        <div
+          className="hover-bg bg_cover"
+          style={{
+            backgroundImage: "url(assets/images/service/hover-bg.jpg)",
+          }}
+        />
+        <div className="content">
+          <div className="icon">
+            <i className="flaticon-cable-car" />
+          </div>
+          <h3 className="title">
+            <a href="https://wa.me/918590812248">FAMILY TRIP</a>
+          </h3>
+          <p>
+            Comfortable family-friendly tours with sightseeing, activities, and
+            accommodation tailored for all age groups.
+          </p>
+          <a href="https://wa.me/918590812248" className="btn-link">
+            For More Details <i className="far fa-long-arrow-right" />
+          </a>
+        </div>
+      </div>
+    </Slider>
+  </div>
+</section>
+      {/*====== End Activity Section ======*/}
+              <section className="py-5 bg-light">
+  <div className="container">
+    <h2 className="mb-4 text-center my-4">Upcoming Events</h2>
+    <div className="row">
+      {events.map((event) => (
+        <div className="col-md-4 mb-3" key={event._id}>
+          <EventCard
+            title={event.title}
+            description={event.description}
+            date={event.date}
+            price={event.price}
+            image={event.image}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+      {/*====== end  Section ======*/}
+      {/*====== Start Activity Section ======*/}
+<section className="activity-section">
+  <div className="activity-wrapper-bgc text-white black-bg">
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-xl-7">
+          <div className="section-title text-center mb-50 wow fadeInDown">
+            <span className="sub-title">Popular Destinations</span>
+            <h2>Feel Real Adventure and Explore India</h2>
+          </div>
+        </div>
+      </div>
+      <Tab.Container defaultActiveKey={"kerala"}>
+        <div className="row">
+          {/* Updated columns for mobile stacking */}
+          <div className="col-12 col-md-4">
+            <div className="activity-nav-tab mb-4 mb-md-0 wow fadeInLeft h-100">
+              <Nav as="ul" className="nav nav-tabs">
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#kerala" eventKey="kerala">
+                    Kerala
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#goa" eventKey="goa">
+                    Goa
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#maharashtra" eventKey="maharashtra">
+                    Maharashtra
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#karnataka" eventKey="karnataka">
+                    Karnataka
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#jammu" eventKey="jammu">
+                    Jammu & Kashmir
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link as="a" href="#other" eventKey="other">
+                    Other Tourist Places
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
             </div>
           </div>
-          {/*=== Service Slider One ===*/}
-          <Slider
-            {...sliderActive4Item}
-            className="slider-active-4-item wow fadeInUp"
-          >
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item-two">
-              <div
-                className="hover-bg bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/service/hover-bg.jpg)",
-                }}
-              />
-              <div className="content">
-                <div className="icon">
-                  <i className="flaticon-camping" />
+          {/* Added margin-top for mobile (mt-4) and removed it for larger screens (mt-md-0) */}
+          <div className="col-12 col-md-8 mt-4 mt-md-0">
+            <Tab.Content className="tab-content wow fadeInRight">
+              {/*=== Tab Pane for Kerala ===*/}
+              <Tab.Pane className="tab-pane fade" eventKey="kerala">
+                <div className="row">
+                  {/* Added 'activity-image-item' class for uniform size */}
+                  <div className="col-6 mb-4"><img src="assets/images/kerala-1.jpg" className="img-fluid radius-12 activity-image-item" alt="Kerala Backwaters" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/kerala-2.jpg" className="img-fluid radius-12 activity-image-item" alt="Kerala Tea Plantations" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/kerala-3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Kathakali Dancer" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/kerala-4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Kerala Houseboat" /></div>
                 </div>
-                <h3 className="title">
-                  <a href="#">Tent Camping</a>
-                </h3>
-                <p>
-                  Sit amet consectetur integer tincidunt nodalesry volutpat
-                  neque ferme malesua da sceleris quecy massa lacus
-                </p>
-                <a href="#" className="btn-link">
-                  Read More <i className="far fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item-two">
-              <div
-                className="hover-bg bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/service/hover-bg.jpg)",
-                }}
-              />
-              <div className="content">
-                <div className="icon">
-                  <i className="flaticon-cable-car" />
+              </Tab.Pane>
+              {/*=== Tab Pane for Goa ===*/}
+              <Tab.Pane className="tab-pane fade" eventKey="goa">
+                 <div className="row">
+                  <div className="col-6 mb-4"><img src="assets/images/goa1.jpeg" className="img-fluid radius-12 activity-image-item" alt="Goa Beach" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/goa2.jpeg" className="img-fluid radius-12 activity-image-item" alt="Goa Church" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/goa3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Goa Coastline" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/goa4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Goa Beach Huts" /></div>
                 </div>
-                <h3 className="title">
-                  <a href="#">Glamping Cabin</a>
-                </h3>
-                <p>
-                  Sit amet consectetur integer tincidunt nodalesry volutpat
-                  neque ferme malesua da sceleris quecy massa lacus
-                </p>
-                <a href="#" className="btn-link">
-                  Read More <i className="far fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item-two">
-              <div
-                className="hover-bg bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/service/hover-bg.jpg)",
-                }}
-              />
-              <div className="content">
-                <div className="icon">
-                  <i className="flaticon-trailer" />
+              </Tab.Pane>
+              {/*=== ... Repeat for all other Tab.Panes, adding 'activity-image-item' to each img tag ===*/}
+              <Tab.Pane className="tab-pane fade" eventKey="maharashtra">
+                 <div className="row">
+                  <div className="col-6 mb-4"><img src="assets/images/maharashtra1.jpeg" className="img-fluid radius-12 activity-image-item" alt="Gateway of India, Mumbai" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/maharashtra2.jpeg" className="img-fluid radius-12 activity-image-item" alt="Western Ghats, Maharashtra" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/maharashtra3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Pratapgad Fort" /></div>
+                  <div className="col-6 mb-4"><img src="assets/images/maharashtra4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Mumbai Sea Link" /></div>
                 </div>
-                <h3 className="title">
-                  <a href="#">RV Caravan Trailers</a>
-                </h3>
-                <p>
-                  Sit amet consectetur integer tincidunt nodalesry volutpat
-                  neque ferme malesua da sceleris quecy massa lacus
-                </p>
-                <a href="#" className="btn-link">
-                  Read More <i className="far fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item-two">
-              <div
-                className="hover-bg bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/service/hover-bg.jpg)",
-                }}
-              />
-              <div className="content">
-                <div className="icon">
-                  <i className="flaticon-firewood" />
+              </Tab.Pane>
+              <Tab.Pane className="tab-pane fade" eventKey="karnataka">
+                <div className="row">
+                    <div className="col-6 mb-4"><img src="assets/images/karnataka1.jpeg" className="img-fluid radius-12 activity-image-item" alt="Hampi, Karnataka" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/karnataka2.jpeg" className="img-fluid radius-12 activity-image-item" alt="Mysore Palace" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/karnataka3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Coorg, Karnataka" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/karnataka4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Jog Falls, Karnataka" /></div>
                 </div>
-                <h3 className="title">
-                  <a href="#">Woodfire &amp; BBQ Party</a>
-                </h3>
-                <p>
-                  Sit amet consectetur integer tincidunt nodalesry volutpat
-                  neque ferme malesua da sceleris quecy massa lacus
-                </p>
-                <a href="#" className="btn-link">
-                  Read More <i className="far fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-            {/*=== Single Service Item ===*/}
-            <div className="single-service-item-two">
-              <div
-                className="hover-bg bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/service/hover-bg.jpg)",
-                }}
-              />
-              <div className="content">
-                <div className="icon">
-                  <i className="flaticon-cable-car" />
+              </Tab.Pane>
+              <Tab.Pane className="tab-pane fade" eventKey="jammu">
+                <div className="row">
+                    <div className="col-6 mb-4"><img src="assets/images/jammu1.jpeg" className="img-fluid radius-12 activity-image-item" alt="Dal Lake, Srinagar" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/jammu2.jpeg" className="img-fluid radius-12 activity-image-item" alt="Pahalgam, Kashmir" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/jammu3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Shikara Boats" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/jammu4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Kashmir Mountains" /></div>
                 </div>
-                <h3 className="title">
-                  <a href="#">Glamping Cabin</a>
-                </h3>
-                <p>
-                  Sit amet consectetur integer tincidunt nodalesry volutpat
-                  neque ferme malesua da sceleris quecy massa lacus
-                </p>
-                <a href="#" className="btn-link">
-                  Read More <i className="far fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </Slider>
+              </Tab.Pane>
+              <Tab.Pane className="tab-pane fade" eventKey="other">
+                <div className="row">
+                    <div className="col-6 mb-4"><img src="assets/images/other1.jpeg" className="img-fluid radius-12 activity-image-item" alt="Taj Mahal, Agra" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/other2.jpeg" className="img-fluid radius-12 activity-image-item" alt="Hawa Mahal, Jaipur" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/other3.jpeg" className="img-fluid radius-12 activity-image-item" alt="Ganges River, Varanasi" /></div>
+                    <div className="col-6 mb-4"><img src="assets/images/other4.jpeg" className="img-fluid radius-12 activity-image-item" alt="Golden Temple, Amritsar" /></div>
+                </div>
+              </Tab.Pane>
+            </Tab.Content>
+          </div>
         </div>
-      </section>
-      {/*====== End Activity Section ======*/}
+      </Tab.Container>
+    </div>
+  </div>
+</section>
+      {/*====== Start activity Section ======*/}
       {/*====== Start Services Section ======*/}
       <section className="services-seciton pt-100">
         <div className="container">
