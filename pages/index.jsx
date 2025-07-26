@@ -159,10 +159,10 @@ React.useEffect(() => {
               <div className="about-content-box text-center mb-55 wow fadeInDown">
                 <div className="section-title mb-30">
                   <span className="sub-title">About Company</span>
-                  <h2>We Are Most Funning Company About Travel &amp; Tours</h2>
+                  <h2>Your Ultimate Travel & Tour Partner — Fun, Friendly, and Unforgettable!</h2>
                 </div>
                 <p>
-                 Founded in 2021, we are a trusted travel agency dedicated to making every journey memorable and hassle-free. Over the years, we have organized countless college trips, school excursions, and strangers’ adventure trips, helping people explore new places, make friends, and create unforgettable memories. For families, we offer carefully planned family tours and resort bookings, ensuring comfort and relaxation. Additionally, we provide reliable flight and train ticket booking services at competitive prices, making travel simple and stress-free. Whether it’s an adventurous trip with friends or a peaceful family getaway, we are here to turn your travel dreams into reality.
+                 Founded in 2021, we are a trusted travel agency dedicated to making every journey memorable and hassle-free. Over the years, we have organized countless college trips, school excursions, and strangers adventure trips, helping people explore new places, make friends, and create unforgettable memories. For families, we offer carefully planned family tours and resort bookings, ensuring comfort and relaxation. Additionally, we provide reliable flight and train ticket booking services at competitive prices, making travel simple and stress-free. Whether it’s an adventurous trip with friends or a peaceful family getaway, we are here to turn your travel dreams into reality.
                 </p>
               </div>
             </div>
@@ -573,6 +573,15 @@ image={event.image}
                           <li>
                             <i className="fas fa-star" />
                           </li>
+                          <li>
+                            <i className="fas fa-star" />
+                          </li>
+                          <li>
+                            <i className="fas fa-star" />
+                          </li>
+                          <li>
+                            <i className="fas fa-star" />
+                          </li>
 
                         </ul>
                       </div>
@@ -720,13 +729,13 @@ image={event.image}
                 <div className="social-box mb-40 float-lg-end">
                   <ul className="social-link">
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/share/1ZUsT12XKy/?mibextid=wwXIfr">
                         <i className="fab fa-facebook-f" />
                       </a>
                     </li>
                     
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/rubisco_tour_planners?igsh=b216Znd2MTlsYXcz&utm_source=qr">
                         <i className="fab fa-instagram" />
                       </a>
                     </li>
@@ -745,8 +754,7 @@ image={event.image}
                   <h4 className="widget-title">About Us</h4>
                   <div className="footer-content">
                     <p>
-                      To take trivial example which us ever undertakes laborious
-                      physica exercise except obsome
+                     we are a trusted travel agency dedicated to making every journey memorable and hassle-free.
                     </p>
                     <a href="#" className="footer-logo Customlogo">
                       <img
