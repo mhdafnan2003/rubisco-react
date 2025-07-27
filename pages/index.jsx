@@ -112,39 +112,60 @@ React.useEffect(() => {
               </div>
             </div>
             {/*=== Single Slider ===*/}
-            <div className="single-slider">
-              <div
-                className="image-layer bg_cover"
-                style={{
-                  backgroundImage: "url(assets/images/hero/hero4.jpg)",
-                }}
-              />
-              <div className="container-fluid">
-                <div className="row justify-content-center">
-                  <div className="col-xl-9">
-                    {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white text-center">
-                      {/* <span className="ribbon">Tour &amp; Travels</span> */}
-                      <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Your Ultimate  Adventure Awaits!
-                      </h1>
-                      <div
-                        className="hero-button"
-                        data-animation="fadeInRight"
-                        data-delay=".6s"
-                      >
-                       <Link legacyBehavior href="#service">
-                          <a className="main-btn primary-btn">
-                            Explore Our Service
-                            <i className="fas fa-paper-plane" />
-                          </a>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="single-slider" style={{ position: 'relative' }}>
+  {/*=== Image Tag for Background ===*/}
+  <img
+    src="assets/images/hero/hero4.jpg"
+    alt="Adventure background"
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      objectFit: 'cover',
+    }}
+  />
+
+  {/*=== Black Overlay ===*/}
+  <div
+    className="overlay"
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.1)', // 40% black opacity
+    }}
+  />
+
+  {/*=== Container for Content (needs relative position to sit on top) ===*/}
+  <div className="container-fluid" style={{ position: 'relative', zIndex: 2 }}>
+    <div className="row justify-content-center">
+      <div className="col-xl-9">
+        {/*=== Hero Content ===*/}
+        <div className="hero-content text-white text-center">
+          <h1 data-animation="fadeInDown" data-delay=".4s">
+            Your Ultimate Adventure Awaits!
+          </h1>
+          <div
+            className="hero-button"
+            data-animation="fadeInRight"
+            data-delay=".6s"
+          >
+            <Link legacyBehavior href="#service">
+              <a className="main-btn primary-btn">
+                Explore Our Service
+                <i className="fas fa-paper-plane" />
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           </Slider>
         </div>
       </section>
@@ -247,7 +268,7 @@ React.useEffect(() => {
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80)",
+           backgroundImage: "url('assets/images/features/strangers.webp')",
           }}
         />
         <div className="content">
@@ -297,7 +318,7 @@ React.useEffect(() => {
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+           backgroundImage: "url('assets/images/features/College.jpg')",
           }}
         />
         <div className="content">
@@ -322,7 +343,7 @@ React.useEffect(() => {
         <div
           className="hover-bg bg_cover"
           style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=932&q=80)",
+            backgroundImage: "url('assets/images/features/school.jpg')",
           }}
         />
         <div className="content">
@@ -510,28 +531,53 @@ image={event.image}
       {/*====== End Features Section ======*/}
       {/*====== Start CTA Section ======*/}
       <section
-        className="cta-bg overlay bg_cover pt-140 pb-150"
-        style={{ backgroundImage: "url('/assets/images/bg/feat2.jpg')" }}
-      >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8">
-              {/*=== CTA Content Box ===*/}
-              <div className="cta-content-box text-center text-white wow fadeInDown">
-                <h2 className="mb-35">
-                  Ready to Travel With Real Adventure and Enjoy Natural
-                </h2>
-                <Link legacyBehavior href="https://www.instagram.com/rubisco_tour_planners/">
-                  <a className="main-btn primary-btn">
-                    Follow Us on Instagram
-                    <i className="fab fa-instagram" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
+  className="cta-bg overlay pt-140 pb-150"
+  style={{ position: 'relative' }}
+>
+  {/*=== Image Tag for Background ===*/}
+  <img
+    src="/assets/images/bg/feat2.jpg"
+    alt="Man standing on a cliff"
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      objectFit: 'cover',
+    }}
+  />
+  {/*=== Overlay to replicate original style ===*/}
+  <div
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust opacity if needed
+    }}
+  />
+  {/*=== Main Content ===*/}
+  <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+    <div className="row justify-content-center">
+      <div className="col-xl-8">
+        {/*=== CTA Content Box ===*/}
+        <div className="cta-content-box text-center text-white wow fadeInDown">
+          <h2 className="mb-35">
+            Ready to Travel With Real Adventure and Enjoy Natural
+          </h2>
+          <Link legacyBehavior href="https://www.instagram.com/rubisco_tour_planners/">
+            <a className="main-btn primary-btn">
+              Follow Us on Instagram
+              <i className="fab fa-instagram" />
+            </a>
+          </Link>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
       {/*====== End CTA Section ======*/}
       {/*====== Start Fact Section ======*/}
      
