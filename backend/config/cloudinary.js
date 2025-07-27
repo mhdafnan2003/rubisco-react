@@ -5,10 +5,11 @@ const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
 
 // Configure Cloudinary with your credentials from the .env file
+// This is the secure and correct way to do it.
 cloudinary.config({
-  cloud_name: 'dornulfps',
-  api_key: '759169453384724',
-  api_secret: 'A7ZigG3h6gaTjoOiWZoqbn0O6VA',
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 // Set up the storage engine for Multer
