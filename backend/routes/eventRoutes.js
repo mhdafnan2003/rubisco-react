@@ -11,8 +11,12 @@ const router = express.Router();
  */
 router.post("/", upload.single("image"), async (req, res) => {
   try {
+    // Log the incoming data
+    console.log("Request Body:", req.body);
+    console.log("Request File:", req.file); 
+
     const { title, description, date, price } = req.body;
-    
+
     const newEvent = new Event({
       title,
       description,
