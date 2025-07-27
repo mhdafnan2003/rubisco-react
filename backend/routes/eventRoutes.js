@@ -1,39 +1,28 @@
 const express = require("express");
-const multer = require("multer");
-const path = require("path");
-const fs = require("fs");
 const Event = require("../models/event");
+const upload = require("../config/cloudinary"); // ✅ Import your new Cloudinary upload config
+const cloudinary = require("cloudinary").v2;    // ✅ Import Cloudinary to use its API for deletion
 
 const router = express.Router();
 
-// Multer setup
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/"); // Folder to store uploaded images
-  },
-  filename: function (req, file, cb) {
-    const uniqueName = Date.now() + path.extname(file.originalname);
-    cb(null, uniqueName); // Unique filename with extension
-  },
-});
-
-const upload = multer({ storage });
-
 /**
  * @route   POST /api/events
- * @desc    Create event with image upload
+ * @desc    Create event and upload image to Cloudinary
  */
 router.post("/", upload.single("image"), async (req, res) => {
   try {
     const { title, description, date, price } = req.body;
-    const image = req.file ? `/uploads/${req.file.filename}` : null;
-
+    
     const newEvent = new Event({
       title,
       description,
       date,
       price,
-      image,
+      // Save the image URL and public_id from Cloudinary
+      image: {
+        url: req.file ? req.file.path : "",
+        public_id: req.file ? req.file.filename : "",
+      },
     });
 
     const saved = await newEvent.save();
@@ -59,7 +48,7 @@ router.get("/", async (req, res) => {
 
 /**
  * @route   PUT /api/events/:id
- * @desc    Update event (optionally with new image)
+ * @desc    Update event (and optionally replace image on Cloudinary)
  */
 router.put("/:id", upload.single("image"), async (req, res) => {
   try {
@@ -67,22 +56,23 @@ router.put("/:id", upload.single("image"), async (req, res) => {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ error: "Event not found" });
 
-    // If a new image is uploaded, delete the old one
+    // If a new image is uploaded, delete the old one from Cloudinary
     if (req.file) {
-      if (event.image) {
-        const oldPath = path.join(__dirname, "..", event.image);
-        if (fs.existsSync(oldPath)) {
-          fs.unlinkSync(oldPath);
-        }
+      if (event.image && event.image.public_id) {
+        await cloudinary.uploader.destroy(event.image.public_id);
       }
-      event.image = `/uploads/${req.file.filename}`;
+      // Save new image details
+      event.image = {
+        url: req.file.path,
+        public_id: req.file.filename,
+      };
     }
 
-    // Update fields
-    event.title = title;
-    event.description = description;
-    event.date = date;
-    event.price = price;
+    // Update other fields
+    event.title = title || event.title;
+    event.description = description || event.description;
+    event.date = date || event.date;
+    event.price = price || event.price;
 
     const updated = await event.save();
     res.json(updated);
@@ -94,23 +84,20 @@ router.put("/:id", upload.single("image"), async (req, res) => {
 
 /**
  * @route   DELETE /api/events/:id
- * @desc    Delete event and its image
+ * @desc    Delete event and its image from Cloudinary
  */
 router.delete("/:id", async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ error: "Event not found" });
 
-    // Delete image file if it exists
-    if (event.image) {
-      const imagePath = path.join(__dirname, "..", event.image);
-      if (fs.existsSync(imagePath)) {
-        fs.unlinkSync(imagePath);
-      }
+    // Delete image from Cloudinary if it exists
+    if (event.image && event.image.public_id) {
+      await cloudinary.uploader.destroy(event.image.public_id);
     }
 
     await event.deleteOne();
-    res.json({ success: true });
+    res.json({ success: true, message: "Event deleted successfully" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to delete event" });

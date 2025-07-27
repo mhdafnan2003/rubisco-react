@@ -3,22 +3,20 @@ import { Card, Button } from 'react-bootstrap';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const EventCard = ({ title, description, date, price, image }) => {
-  // --- Corrected Logic for URL and WhatsApp ---
-  const imageUrl = image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_API_URL || ''}${image}`;
+  // ✅ This is the corrected line
+  const imageUrl = image && image.url ? image.url : '/placeholder.jpg';
+  
   const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '918590812248';
   
-  // 1. Format the date first
   const formattedDate = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   }).format(new Date(date));
 
-  // 2. Now use the formattedDate in your message
   const message = `Hey! I'm interested to know more about the "${title}" event planned on ${formattedDate}.`;
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodedMessage}`;
-
 
   return (
     <Card 
