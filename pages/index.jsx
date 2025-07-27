@@ -112,60 +112,39 @@ React.useEffect(() => {
               </div>
             </div>
             {/*=== Single Slider ===*/}
-            <div className="single-slider" style={{ position: 'relative' }}>
-  {/*=== Image Tag for Background ===*/}
-  <img
-    src="assets/images/hero/hero4.jpg"
-    alt="Adventure background"
-    style={{
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      top: 0,
-      left: 0,
-      objectFit: 'cover',
-    }}
-  />
-
-  {/*=== Black Overlay ===*/}
-  <div
-    className="overlay"
-    style={{
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      top: 0,
-      left: 0,
-      backgroundColor: 'rgba(0, 0, 0, 0.1)', // 40% black opacity
-    }}
-  />
-
-  {/*=== Container for Content (needs relative position to sit on top) ===*/}
-  <div className="container-fluid" style={{ position: 'relative', zIndex: 2 }}>
-    <div className="row justify-content-center">
-      <div className="col-xl-9">
-        {/*=== Hero Content ===*/}
-        <div className="hero-content text-white text-center">
-          <h1 data-animation="fadeInDown" data-delay=".4s">
-            Your Ultimate Adventure Awaits!
-          </h1>
-          <div
-            className="hero-button"
-            data-animation="fadeInRight"
-            data-delay=".6s"
-          >
-            <Link legacyBehavior href="#service">
-              <a className="main-btn primary-btn">
-                Explore Our Service
-                <i className="fas fa-paper-plane" />
-              </a>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div className="single-slider">
+              <div
+                className="image-layer bg_cover"
+                style={{
+                  backgroundImage: "url(assets/images/hero/hero4.jpg)",
+                }}
+              />
+              <div className="container-fluid">
+                <div className="row justify-content-center">
+                  <div className="col-xl-9">
+                    {/*=== Hero Content ===*/}
+                    <div className="hero-content text-white text-center">
+                      {/* <span className="ribbon">Tour &amp; Travels</span> */}
+                      <h1 data-animation="fadeInDown" data-delay=".4s">
+                        Your Ultimate  Adventure Awaits!
+                      </h1>
+                      <div
+                        className="hero-button"
+                        data-animation="fadeInRight"
+                        data-delay=".6s"
+                      >
+                      <Link legacyBehavior href="#service">
+                          <a className="main-btn primary-btn">
+                            Explore Our Service
+                            <i className="fas fa-paper-plane" />
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Slider>
         </div>
       </section>
@@ -536,7 +515,7 @@ image={event.image}
 >
   {/*=== Image Tag for Background ===*/}
   <img
-    src="/assets/images/bg/feat2.jpg"
+    src="/assets/images/bg/feat2.JPG"
     alt="Man standing on a cliff"
     style={{
       position: 'absolute',
