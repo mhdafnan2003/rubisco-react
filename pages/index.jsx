@@ -116,7 +116,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero4.jpg)",
+                  backgroundImage: "url(assets/images/hero/hero4.JPG)",
                 }}
               />
               <div className="container-fluid">
