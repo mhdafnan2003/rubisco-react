@@ -116,7 +116,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero2.jpg)",
+                  backgroundImage: "url(assets/images/hero/hero4.jpg)",
                 }}
               />
               <div className="container-fluid">
@@ -205,6 +205,15 @@ React.useEffect(() => {
               <div className="img-holder">
                 <img
                   src="assets/images/features/feat5.jpeg"
+                  alt="Features Image"
+                />
+              </div>
+            </div>
+            {/*=== Features Image Item ===*/}
+            <div className="single-features-item mb-40">
+              <div className="img-holder">
+                <img
+                  src="assets/images/features/about2.jpeg"
                   alt="Features Image"
                 />
               </div>
@@ -335,12 +344,13 @@ React.useEffect(() => {
 
       {/*=== FAMILY TRIP (FINAL IMAGE URL) ===*/}
       <div className="single-service-item-two">
-        <div
-          className="hover-bg bg_cover"
-          style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1442504206296-ac5d0531a7a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
-          }}
-        />
+       <div
+  className="hover-bg bg_cover"
+  style={{
+    backgroundImage: "url('assets/images/features/fam5.jpg')",
+  }}
+/>
+
         <div className="content">
           <div className="icon">
             <i className="fas fa-users" />
@@ -501,7 +511,7 @@ image={event.image}
       {/*====== Start CTA Section ======*/}
       <section
         className="cta-bg overlay bg_cover pt-140 pb-150"
-        style={{ backgroundImage: "url(assets/images/bg/feat2.jpg)" }}
+        style={{ backgroundImage: "url('/assets/images/bg/feat2.jpg')" }}
       >
         <div className="container">
           <div className="row justify-content-center">
@@ -826,26 +836,36 @@ image={event.image}
           </div>
           {/*=== Footer Copyright ===*/}
           <div className="footer-copyright">
-            <div className="row">
-              <div className="col-lg-6">
-                {/*=== Footer Text ===*/}
-                <div className="footer-text">
-                  <p>
-                    Copy@ 2025 <span style={{ color: "#F7921E" }}>Rubisco</span>
-                    , All Right Reserved
-                  </p>
-                </div>
-                
-              </div>
-              <div className="footer-text col-lg-6 " style={{textAlign:'right'}}>
-                  <p>
-                    Designed by
-                    <span style={{ color: "#F7921E" }}><a href="https://www.zenorix.in/">Zenorix.in</a></span>
-                  </p>
-                </div>
-             
-            </div>
-          </div>
+  <div className="row">
+    {/* Left Column: Copyright Notice */}
+    <div className="col-lg-6">
+      {/* - `text-center` makes text centered by default (on mobile).
+        - `text-lg-start` makes text left-aligned on large (lg) screens and up.
+      */}
+      <div className="footer-text text-center text-lg-start">
+        <p>
+          Copy@ 2025 <span style={{ color: "#F7921E" }}>Rubisco</span>, All Right Reserved
+        </p>
+      </div>
+    </div>
+
+    {/* Right Column: Designer Credit */}
+    <div className="col-lg-6">
+      {/* - Removed the inline style `style={{ textAlign: 'right' }}`.
+        - `text-center` makes text centered by default (on mobile).
+        - `text-lg-end` makes text right-aligned on large (lg) screens and up.
+      */}
+      <div className="footer-text text-center text-lg-end">
+        <p>
+          Designed by{" "}
+          <span style={{ color: "#F7921E" }}>
+            <a href="https://www.zenorix.in/">Zenorix.in</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </footer>
     </Layout>

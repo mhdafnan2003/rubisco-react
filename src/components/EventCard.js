@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const EventCard = ({ title, description, date, price, image }) => {
   // --- Corrected Logic for URL and WhatsApp ---
   const imageUrl = image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_API_URL || ''}${image}`;
-  const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '916282878105';
+  const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '918590812248';
   
   // 1. Format the date first
   const formattedDate = new Intl.DateTimeFormat('en-GB', {
