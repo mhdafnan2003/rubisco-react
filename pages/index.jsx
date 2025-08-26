@@ -48,7 +48,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero.jpeg)",
+                  backgroundImage: "url(assets/images/hero/heronew3.jpg)",
                 }}
               />
               <div className="container-fluid">
@@ -82,7 +82,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero3.jpeg)",
+                  backgroundImage: "url(assets/images/hero/heronew2.jpg)",
                 }}
               />
               <div className="container-fluid">
@@ -116,7 +116,7 @@ React.useEffect(() => {
               <div
                 className="image-layer bg_cover"
                 style={{
-                  backgroundImage: "url(assets/images/hero/hero4.JPG)",
+                  backgroundImage: "url(assets/images/hero/heronew.jpg)",
                 }}
               />
               <div className="container-fluid">
